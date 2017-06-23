@@ -3,8 +3,8 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 
 const sassPath = './app/scss/**/*.scss';
-const scriptPath = './app/javascript/app.js'
-const htmlPath = './app/index.html'
+const scriptPath = './app/javascript/app.js';
+const htmlPath = './app/index.html';
 
 // Compile scss in css
 gulp.task('sass-to-css', function () {
@@ -16,7 +16,7 @@ gulp.task('sass-to-css', function () {
     }));
 });
 
-gulp.task('reload', function {
+gulp.task('reload', function() {
   browserSync.reload();
 });
 
@@ -28,7 +28,7 @@ gulp.task('sync', function() {
   });
 });
 
-// Watch for saved changes and reload browser
+// Main task
 gulp.task('watch', ['sync', 'sass-to-css'], function() {
   gulp.watch(sassPath, ['sass-to-css']);
   gulp.watch(scriptPath, ['reload']);
