@@ -14,9 +14,9 @@ function getDate() {
     var minutes = todaysDate.getMinutes();
   }
   if (hours24 >= 12) {
-    var timeOfDay = "PM";
+    var timeOfDay = "pm";
   } else {
-    var timeOfDay = "AM"
+    var timeOfDay = "am"
   }
   $('#day').html(day);
   $('#date').html(date);
@@ -25,8 +25,8 @@ function getDate() {
   setTimeout(getDate, 999);
 }
 
-// adds 30 mins to current time for future time section
-function getDatePlus30() {
+// adds 30 mins to current time
+function getTimePlus30() {
   var todaysDate = new Date();
   var todaysDatePlus30 = new Date();
   todaysDatePlus30.setMinutes(todaysDate.getMinutes()+30);
@@ -38,15 +38,15 @@ function getDatePlus30() {
     var minutes = todaysDatePlus30.getMinutes();
   }
   if (hours24 >= 12) {
-    var timeOfDay = "PM";
+    var timeOfDay = "pm";
   } else {
-    var timeOfDay = "AM"
+    var timeOfDay = "am"
   }
-  $('#time-plus-30').html(hours12 + ':' + minutes + timeOfDay);
-  setTimeout(getDatePlus30, 999);
+  $('#time').append(' - ' + hours12 + ':' + minutes + timeOfDay);
+  setTimeout(getTimePlus30, 999);
 }
 
 window.onload = function() {
   getDate();
-  getDatePlus30();
+  getTimePlus30();
 }
