@@ -20,17 +20,17 @@ gulp.task('reload', function() {
   browserSync.reload();
 });
 
+// Main task
+gulp.task('watch', ['sync', 'sass-to-css'], function() {
+  gulp.watch(sassPath, ['sass-to-css']);
+  gulp.watch(scriptPath, ['reload']);
+  gulp.watch(htmlPath, ['reload']);
+});
+
 gulp.task('sync', function() {
   browserSync.init({
     server: {
       baseDir: 'app'
     },
   });
-});
-
-// Main task
-gulp.task('watch', ['sync', 'sass-to-css'], function() {
-  gulp.watch(sassPath, ['sass-to-css']);
-  gulp.watch(scriptPath, ['reload']);
-  gulp.watch(htmlPath, ['reload']);
 });
