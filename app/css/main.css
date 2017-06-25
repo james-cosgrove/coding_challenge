@@ -18,7 +18,7 @@
   border-radius: 50%;
   margin: 0 auto;
   position: relative;
-  transition: all 2s; }
+  transition: all 0.5s; }
 
 .date-wrapper {
   background-color: #f6f6f6;
@@ -32,7 +32,7 @@
   left: 0;
   right: 0;
   margin: auto;
-  transition: all 2s; }
+  transition: all 0.5s; }
   .date-wrapper .day {
     text-transform: uppercase;
     position: absolute;
@@ -47,8 +47,8 @@
       width: 55px;
       height: 30px;
       background-color: #f6f6f6;
-      transition: z-index 2s;
-      transition: background-color 2s; }
+      transition: z-index 0.5s;
+      transition: background-color 0.5s; }
   .date-wrapper .date {
     position: absolute;
     top: -40px;
@@ -75,24 +75,24 @@
     margin: 0 auto;
     width: 50px;
     background-color: #f6f6f6;
-    transition: z-index 2s;
-    transition: background-color 2s; }
+    transition: z-index 0.5s;
+    transition: background-color 0.5s; }
 
 .outer-date-wrapper:hover {
   background-color: #555;
   border: dotted #a7a7a7 2px;
   box-sizing: border-box;
-  transition: all 2s; }
+  transition: all 0.5s; }
   .outer-date-wrapper:hover .date-wrapper {
     color: #fff;
     background-color: #555;
     border-color: #555;
-    transition: all 2s; }
+    transition: all 0.5s; }
   .outer-date-wrapper:hover .gavel {
     color: #fff;
     background-color: #555;
-    transition: all 2s; }
+    transition: all 0.5s; }
   .outer-date-wrapper:hover .day p {
     color: #fff;
     background-color: #555;
-    transition: all 2s; }
+    transition: all 0.5s; }

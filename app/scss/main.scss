@@ -24,7 +24,7 @@ $hover-bg-color: #555;
     border-radius: 50%;
     margin: 0 auto;
     position: relative;
-    transition: all 2s;
+    transition: all 0.5s;
 }
 
 .date-wrapper {
@@ -39,7 +39,7 @@ $hover-bg-color: #555;
     left: 0;
     right: 0;
     margin: auto;
-    transition: all 2s;
+    transition: all 0.5s;
 
     .day {
         text-transform: uppercase;
@@ -55,8 +55,8 @@ $hover-bg-color: #555;
           width: 55px;
           height: 30px;
           background-color: $bg-color;
-          transition: z-index 2s;
-          transition: background-color 2s;
+          transition: z-index 0.5s;
+          transition: background-color 0.5s;
         }
     }
 
@@ -90,8 +90,8 @@ $hover-bg-color: #555;
         margin: 0 auto;
         width: 50px;
         background-color: $bg-color;
-        transition: z-index 2s;
-        transition: background-color 2s;
+        transition: z-index 0.5s;
+        transition: background-color 0.5s;
     }
 }
 
@@ -99,23 +99,23 @@ $hover-bg-color: #555;
     background-color: $hover-bg-color;
     border: dotted #a7a7a7 2px;
     box-sizing: border-box;
-    transition: all 2s;
+    transition: all 0.5s;
 
     .date-wrapper {
         color: #fff;
         background-color: $hover-bg-color;
         border-color: $hover-bg-color;
-        transition: all 2s;
+        transition: all 0.5s;
 
     }
     .gavel {
       color: #fff;
       background-color: $hover-bg-color;
-      transition: all 2s;
+      transition: all 0.5s;
     }
     .day p {
       color: #fff;
       background-color: $hover-bg-color;
-      transition: all 2s;
+      transition: all 0.5s;
     }
 }
