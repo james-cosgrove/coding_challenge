@@ -1,0 +1,121 @@
+$bg-color: #f6f6f6;
+$hover-bg-color: #555;
+
+.main-wrapper {
+    color: #888;
+    font-family: "Arial", sans-serif;
+    text-align: center;
+    letter-spacing: 3px;
+    -webkit-font-smoothing: antialiased;
+    margin-top: 40px;
+
+    .time {
+        font-size: 1.8rem;
+        font-weight: 300;
+    }
+}
+
+.outer-date-wrapper {
+    background-color: $bg-color;
+    border: dotted $bg-color 2px;
+    box-sizing: border-box;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    transition: all 2s;
+}
+
+.date-wrapper {
+    background-color: $bg-color;
+    border-radius: 50%;
+    border: dotted #ddd 2px;
+    height: 210px;
+    width: 210px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: all 2s;
+
+    .day {
+        text-transform: uppercase;
+        position: absolute;
+        top: -7px;
+        left: 0;
+        right: 0;
+        font-weight: bold;
+        p {
+          z-index: 99999;
+          display: block;
+          margin: 0 auto;
+          width: 55px;
+          height: 30px;
+          background-color: $bg-color;
+          transition: z-index 2s;
+          transition: background-color 2s;
+        }
+    }
+
+    .date {
+        position: absolute;
+        top: -40px;
+        left: 0;
+        right: 0;
+        font-size: 5rem;
+        font-weight: 300;
+    }
+
+    .month {
+        text-transform: uppercase;
+        position: absolute;
+        top: 110px;
+        font-size: 1.5rem;
+        font-weight: lighter;
+        left: 0;
+        right: 0;
+    }
+
+    .gavel {
+        position: absolute;
+        font-size: 2rem;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        z-index: 99999;
+        display: block;
+        margin: 0 auto;
+        width: 50px;
+        background-color: $bg-color;
+        transition: z-index 2s;
+        transition: background-color 2s;
+    }
+}
+
+.outer-date-wrapper:hover {
+    background-color: $hover-bg-color;
+    border: dotted #a7a7a7 2px;
+    box-sizing: border-box;
+    transition: all 2s;
+
+    .date-wrapper {
+        color: #fff;
+        background-color: $hover-bg-color;
+        border-color: $hover-bg-color;
+        transition: all 2s;
+
+    }
+    .gavel {
+      color: #fff;
+      background-color: $hover-bg-color;
+      transition: all 2s;
+    }
+    .day p {
+      color: #fff;
+      background-color: $hover-bg-color;
+      transition: all 2s;
+    }
+}
