@@ -1,9 +1,9 @@
-const days = ['Mon','Tues','Wed','Thurs','Fri','Sat','Sun'];
+const days = ['Sun','Mon','Tues','Wed','Thurs','Fri','Sat',];
 const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 
 function getDate() {
   var todaysDate = new Date();
-  var day = days[todaysDate.getDay()-1];
+  var day = days[todaysDate.getDay()];
   var date = todaysDate.getDate();
   var month = months[todaysDate.getMonth()-1];
   var hours24 = todaysDate.getHours();
